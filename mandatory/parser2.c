@@ -58,11 +58,11 @@ int	count_game_elem(t_game *game, char c)
 void	game_elements(t_game *game)
 {
 	game->collectible = count_game_elem(game, 'C');
-	if (game->collectible < 1)
+	if (game->collectible < 1) //Check if there's at least one collectible on the map
 		map_error(game, "Error\n There must be 1 or more Coins on the map!");
-	if (count_game_elem(game, 'P') != 1)
+	if (count_game_elem(game, 'P') != 1) //must be one player
 		map_error(game, "Error\n There must be only 1 Player on the map!");
-	if (count_game_elem(game, 'E') < 1)
+	if (count_game_elem(game, 'E') < 1) //one  exit or more on the map
 		map_error(game, "Error\n There must be 1 or more Exits on the map!");
 }
 
