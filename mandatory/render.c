@@ -68,9 +68,9 @@ void	rendering_map(t_game *game)
 	int	x;
 	int	y;
 
-	rendering_win(game);
+	rendering_win(game);  //// Create the game window
 	y = 0;
-	while (game->map[y])
+	while (game->map[y]) //
 	{
 		x = 0;
 		while (game->map[y][x])
