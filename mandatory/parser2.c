@@ -18,14 +18,14 @@ void	check_map_chars(t_game *game)
 	int		k;
 	char	ch;
 
-	i = 0;
+	i = 0; //index for iterating over rows of the map
 	while (game->map[i])
 	{
-		k = 0;
+		k = 0; // index for iterating over characters in each row
 		while (game->map[i][k])
 		{
 			ch = game->map[i][k];
-			if (ch != 'P' && ch != 'C' && ch != 'E' && ch != '0' && ch != '1')
+			if (ch != 'P' && ch != 'C' && ch != 'E' && ch != '0' && ch != '1')  //// Check if the current character is one of the valid symbols
 				map_error(game, "Error\n Invalid simbol(s) on the map!");
 			k++;
 		}
@@ -46,8 +46,8 @@ int	count_game_elem(t_game *game, char c)
 		x = 0;
 		while (game->map[y][x])
 		{
-			if (game->map[y][x] == c)
-				num++;
+			if (game->map[y][x] == c) // Check if the current character is equal to the specified character 'c'
+				num++; //
 			x++;
 		}
 		y++;
